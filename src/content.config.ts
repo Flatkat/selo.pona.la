@@ -8,8 +8,8 @@ const contentSchema = z.object({
 });
 
 export const collections = {
-  content: defineCollection({
-    loader: glob({ base: "./content/", pattern: "**/*.{md,mdx}" }),
+  blog: defineCollection({
+    loader: glob({ base: "./blog/", pattern: "**/*.{md,mdx}" }),
     schema: contentSchema,
   }),
 };
