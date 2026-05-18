@@ -1,0 +1,14 @@
+---
+import "selo-components/common.css"; // has to be above site-specific css
+
+import "@/global.css";
+import Layout from "@/components/Layout.astro";
+import { getCollection } from "astro:content";
+const blogposts = await getCollection('content');
+---
+
+<Layout title="Blog" description="Feel free to change this to your liking">
+      {blogposts.map(post => (
+    <li><a href={`/blog/${post.id}`}>{post.data.title}</a></li>
+  ))}
+</Layout>
