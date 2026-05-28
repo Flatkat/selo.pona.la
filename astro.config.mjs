@@ -10,12 +10,13 @@ const deploy = import.meta.env.PROD
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    locales: ["es", "en", "gl", ],
+    defaultLocale: "es",
+    routing: {
+        prefixDefaultLocale: true
+    }
+  },
   ...deploy,
   integrations: [mdx(), sitemap()],
-  redirects: {
-    "/en/": {
-      status: 301,
-      destination: "/",
-    },
-  },
 });

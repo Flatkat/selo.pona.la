@@ -1,0 +1,33 @@
+---
+import "selo-components/common.css"; // has to be above site-specific css
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import "@/global.css";
+import Layout from "src/components/Layout.astro";
+const aboutURL = getRelativeLocaleUrl("en", "about");
+---
+
+<Layout title="Hi Criso ENGLISH!" description="Feel free to change this to your liking">
+    <h1>About this template</h1>
+    <ul>
+        <li>This template comes from <a href="https://github.com/pona-la/selo.pona.la/">here</a> and uses components from <a href="https://github.com/pona-la/selo-components/">here</a></li>
+        <li>Remember that this template is under GPL-3.0!</li>
+    </ul>
+    <ol>
+        <li>Install <a href="https://pnpm.io/">pnpm</a> to use Astro (Some places may ask u to use npm, just use this instead! Exactly the same but better)</li>
+        <li>Run `pnpm i` in the website folder to install dependencies</li>
+        <li>Run `pnpm run dev` to run the dev server, it will show live updates, you can open it in your browser.</li>
+    </ol>
+    <p>Some stuff here is a bit of a mess btw, contact me if u need any help :3</p>
+
+    <h2>VSCode Plugins</h2>
+    <p>I recommend installing these:</p>
+        <ul>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode">Astro (you really need this one!!!)</a></li> 
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">HTML CSS Support</a></li>
+    </ul>
+    <p>Aditionally take a look at these extension packs and install anything that catches your eye:</p>
+    <ul>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=Gydunhn.vsc-essentials-core">VSC-Essentials-Core</a></li>
+        <li><a href="https://marketplace.visualstudio.com/items?itemName=Gydunhn.vsc-essentials">VSC-Essentials</a></li>
+    </ul>
+</Layout>
